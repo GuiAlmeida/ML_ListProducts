@@ -1,0 +1,46 @@
+@import "@/styles/abstracts/variables";
+
+.header {
+  background: $primary;
+  &__wrapper {
+    padding: 20px 15px;
+    display: flex;
+    max-width: 1215px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    @media (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 55px;
+    }
+  }
+  &__logo {
+    padding-right: 30px;
+    @media (max-width: 768px) {
+      grid-column-start: 4;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
+  }
+  &__actions {
+    .button {
+      padding: 0 0 0 20px;
+    }
+    @media (max-width: 768px) {
+      grid-column-start: 4;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+  .search {
+    @media (max-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "@/styles/abstracts/variables";
+
+.rating {
+  width: 90px;
+  &__stars {
+    display: flex;
+    svg.active {
+      fill: $blue-200;
+    }
+    svg {
+      fill: $blue-100;
+    }
+  }
+}

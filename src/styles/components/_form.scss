@@ -1,0 +1,86 @@
+.form {
+  &__input-wrapper {
+    position: relative;
+    &--input {
+      font-size: 1rem;
+      line-height: 1.33333;
+      font-weight: 400;
+      color: $black;
+      position: relative;
+      z-index: 1;
+      height: 52px;
+      padding: 28px 12px 6px;
+      border-radius: 4px;
+      background-color: transparent;
+      width: 100%;
+      border: 1px solid $gray-600;
+      &:focus {
+        border: 2px solid $blue-200;
+        + .form__input-wrapper--label {
+          top: -10px;
+          font-size: 0.8rem;
+          line-height: 1.42857;
+          font-weight: 400;
+          color: $black;
+          outline: none;
+          z-index: 1;
+        }
+      }
+      &:focus-visible {
+        outline: none;
+      }
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover {
+        -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+        transition: background-color 5000s ease-in-out 0s;
+        color: transparent;
+        z-index: 0;
+        + .form__input-wrapper--label {
+          top: -10px;
+          font-size: 0.8rem;
+          line-height: 1.42857;
+          font-weight: 400;
+          color: $black;
+          outline: none;
+          z-index: 1;
+        }
+      }
+    }
+    &--label {
+      font-size: 1rem;
+      line-height: 1.33333;
+      font-weight: 400;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 17px 0 0 12px;
+      margin: 0;
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all;
+      color: $gray-600;
+    }
+    &--errors {
+      font-size: 0.8rem;
+      line-height: 1.42857;
+      font-weight: 600;
+      color: $black;
+      margin: 4px 0 4px 0;
+      text-align: left;
+      color: $error;
+      font-weight: 500;
+    }
+    &--error {
+      .form__input-wrapper--input {
+        border-color: $error;
+        color: $error;
+        &:focus + .form__input-wrapper--label {
+          color: $error;
+        }
+      }
+      .form__input-wrapper--label {
+        color: $error;
+      }
+    }
+  }
+}

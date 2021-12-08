@@ -1,0 +1,14 @@
+body {
+  color: $black;
+  background: $gray-300;
+}
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  float: none;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
+}

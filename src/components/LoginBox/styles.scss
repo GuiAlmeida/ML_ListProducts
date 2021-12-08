@@ -1,0 +1,28 @@
+@import "@/styles/abstracts/variables";
+
+.login-box {
+  &__wrapper {
+    width: 352px;
+    box-shadow: 0 4px 12px rgb(0, 0, 0, 15%);
+    padding: 24px;
+    border-radius: 8px;
+    margin: 0 auto;
+    background: $white;
+  }
+  &__heading {
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: $black;
+    padding: 0 0 4px 0;
+  }
+  &__subheading {
+    font-size: 1rem;
+    line-height: 1.42857;
+    font-weight: 400;
+    color: $black;
+  }
+  &__form {
+    padding-top: 24px;
+  }
+}

@@ -1,0 +1,46 @@
+@import "@/styles/abstracts/variables";
+
+.sidebar {
+  flex-wrap: wrap;
+  flex: 1 1;
+  max-width: 294px;
+  min-width: 210px;
+  padding-right: 14px;
+  width: 100%;
+  @media screen and (max-width: 620px) {
+    display: none;
+  }
+  &__title {
+    color: $black;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 30px;
+    padding-right: 0.8rem;
+    position: relative;
+    z-index: 1;
+  }
+  &__item {
+    font-weight: 300;
+    margin: 0 0 8px;
+    color: $gray-600;
+    .button--link {
+      padding: 0;
+      font-size: 0.8rem;
+      height: auto;
+      text-align: left;
+      line-height: normal;
+    }
+  }
+  &__load-more {
+    color: $blue-200;
+    text-align: left;
+    height: inherit;
+    width: auto;
+    padding: 0;
+    font-size: 0.8rem;
+    line-height: normal;
+    margin-top: 10px;
+  }
+}
